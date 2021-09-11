@@ -1,0 +1,15 @@
+
+server:
+  port: 8081
+
+dubbo:
+  application:
+    name: provider-ticket
+  registry:
+    address: zookeeper://192.168.8.162:2181
+  #zk内部端口修改   默认为 20800
+  protocol:
+    port: 12398
+  #扫描基本包路径、会将扫描到的业务类注册到zk中
+  scan:
+    base-packages: com.lovecoding.ticket.service
